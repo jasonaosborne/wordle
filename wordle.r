@@ -1,6 +1,9 @@
 library(tidyverse)
 library(emmeans)
 library(multcomp)
+library(conflicted)
+conflict_prefer("filter","dplyr")
+conflict_prefer("select","dplyr")
 
 #read data
 read_delim("wordle-oct23-2023b.csv") -> wordle
